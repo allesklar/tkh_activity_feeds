@@ -10,13 +10,17 @@ Add this line to your application's Gemfile:
 gem 'tkh_activity_feeds'
 ```
 
-And then execute:
+Execute:
 
     $ bundle
 
 Import migration files
 
     $ rake tkh_activity_feeds:install
+
+Migrate the database
+
+    $ rake db:migrate
 
 ## Usage
 
@@ -33,7 +37,7 @@ Activity.create doer_id: current_user.id, message: "Your text goes here. Can inc
 Example of getting some activity items from a user
 
 ```ruby
-# does is the current_user
+# doer is the current_user
 doer.activities.limit(10).each do |activity|
   content_tag :li, "#{activity.doer.name} #{activity.message}"
 end
