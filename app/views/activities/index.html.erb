@@ -14,7 +14,7 @@
     <% @activities.each do |activity| %>
       <tr>
         <td><%= l activity.created_at, format: :tkh_default %></td>
-        <td><%= "#{link_to activity.doer.spiritual_name, detail_path(doer)} #{activity.message}".html_safe %></td>
+        <td><%= "#{link_to activity.doer.spiritual_name, detail_path(activity.doer)} #{activity.message}".html_safe %></td>
       </tr>
     <% end %>
   </tbody>
