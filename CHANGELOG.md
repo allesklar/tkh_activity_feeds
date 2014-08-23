@@ -1,6 +1,10 @@
 # TKH Activity Feeds
 
 
+## 0.0.3
+
+* The index view displays friendly dates from the tkh_toolbox gem.
+
 
 ## 0.0.2
 
