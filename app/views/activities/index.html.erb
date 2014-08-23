@@ -13,7 +13,7 @@
   <tbody>
     <% @activities.each do |activity| %>
       <tr>
-        <td><%= l activity.created_at, format: :tkh_default %></td>
+        <td><%= human_date_and_time(activity.created_at) %></td>
         <td><%= "#{link_to activity.doer.spiritual_name, detail_path(activity.doer)} #{activity.message}".html_safe %></td>
       </tr>
     <% end %>
