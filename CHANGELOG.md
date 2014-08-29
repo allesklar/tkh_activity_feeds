@@ -1,6 +1,12 @@
 # TKH Activity Feeds
 
 
+
+## 0.0.4
+
+* Crash proofed activity index view for when doer user record has been deleted.
+
+
 ## 0.0.3
 
 * The index view displays friendly dates from the tkh_toolbox gem.
