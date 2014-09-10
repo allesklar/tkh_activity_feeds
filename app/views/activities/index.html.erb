@@ -13,9 +13,9 @@
   <tbody>
     <% @activities.each do |activity| %>
       <tr>
-        <td><%= human_date_and_time(activity.created_at) %></td>
+        <td><%= human_date_and_time activity.created_at %></td>
         <% unless activity.doer.blank? %>
-          <td><%= "#{link_to activity.doer.spiritual_name, detail_path(activity.doer)} #{activity.message}".html_safe %></td>
+          <td><%= "#{ link_to activity.doer.spiritual_name, member_path(activity.doer) } #{activity.message}".html_safe %></td>
         <% else # user has been deleted %>
           <td><%= "now deleted user #{activity.message}".html_safe %></td>
         <% end %>
