@@ -2,6 +2,11 @@
 
 
 
+## 0.0.6
+
+* Loosened up dependency versioning.
+
+
 ## 0.0.5
 
 * Activity index view points to member record as opposed to old details controller. Upgrading dependency to tkh_mailing_list gem.
