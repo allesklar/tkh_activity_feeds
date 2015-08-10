@@ -15,7 +15,10 @@
       <tr>
         <td><%= human_date_and_time activity.created_at %></td>
         <% unless activity.doer.blank? %>
-          <td><%= "#{ link_to activity.doer.spiritual_name, member_path(activity.doer) } #{activity.message}".html_safe %></td>
+          <td>
+            <%= "<strong><span class='glyphicon glyphicon-alert'></span> Admin Only Item!</strong> ".html_safe if activity.for_admin_anly? %>
+            <%= "#{ link_to activity.doer.spiritual_name, member_path(activity.doer) } #{activity.message}".html_safe %>
+          </td>
         <% else # user has been deleted %>
           <td><%= "now deleted user #{activity.message}".html_safe %></td>
         <% end %>

@@ -18,6 +18,7 @@ module TkhActivityFeeds
       def copy_migrations
         puts 'creating activity migration'
         migration_template "create_activities.rb", "db/migrate/create_activities.rb"
+        migration_template "add_admin_field_to_activities.rb", "db/migrate/add_admin_field_to_activities.rb"
       end
 
     end
