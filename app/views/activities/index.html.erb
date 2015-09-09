@@ -17,10 +17,10 @@
         <% unless activity.doer.blank? %>
           <td>
             <%= "<strong><span class='glyphicon glyphicon-alert'></span> Admin Only Item!</strong> ".html_safe if activity.for_admin_only? %>
-            <%= "#{ link_to (activity.doer.name.present? ? activity.doer.name : (activity.doer.email || 'anonymous')), edit_member_path(activity.doer) } #{activity.message}".html_safe %>
+            <%= "#{ link_to (activity.doer.name.present? ? activity.doer.name : (activity.doer.email || 'anonymous')), edit_member_path(activity.doer) } #{activity.message}".html_safe %> <%= link_to "<span class='glyphicon glyphicon-minus'></span>".html_safe, activity, method: :delete, data: { confirm: t('are_you_sure') }, title: t('delete'), class: 'btn btn-xs btn-danger' %>
           </td>
         <% else # user has been deleted %>
-          <td><%= "now deleted user #{activity.message}".html_safe %></td>
+          <td><%= "now deleted user #{activity.message}".html_safe %> <%= link_to "<span class='glyphicon glyphicon-minus'></span>".html_safe, activity, method: :delete, data: { confirm: t('are_you_sure') }, title: t('delete'), class: 'btn btn-xs btn-danger' %></td>
         <% end %>
       </tr>
     <% end %>
