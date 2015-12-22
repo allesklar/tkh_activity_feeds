@@ -7,7 +7,7 @@ This Rails engine gem creates and displays activity feeds.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'tkh_activity_feeds'
+gem 'tkh_activity_feeds', '~> 0.1'
 ```
 
 Execute:
@@ -21,6 +21,30 @@ Import migration files
 Migrate the database
 
     $ rake db:migrate
+
+Start your server
+
+    $ rails s
+
+
+## Upgrading
+
+Update gem
+
+    $ bundle update tkh_activity_feeds
+
+Import any new migration files
+
+    $ rake tkh_activity_feeds:update
+
+Migrate the database if needed
+
+    $ rake db:migrate
+
+Start your server
+
+    $ rails s
+
 
 ## Usage
 

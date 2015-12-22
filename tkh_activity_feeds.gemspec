@@ -21,6 +21,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency "railties", "> 4.0.0"
   spec.add_dependency "tkh_toolbox", "> 0.9"
 
-  spec.add_development_dependency "bundler", "> 1.7"
-  spec.add_development_dependency "rake", "> 10.0"
+  spec.add_development_dependency "bundler"
+  spec.add_development_dependency "rake"
 end
