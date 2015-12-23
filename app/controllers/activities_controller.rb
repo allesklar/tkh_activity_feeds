@@ -1,7 +1,7 @@
 class ActivitiesController < ApplicationController
 
   before_action :authenticate
-  before_action :authenticate_with_admin
+  before_action -> { require_permission 'write_activities'}
 
   def index
     @activities = Activity.by_recent.paginate(:page => params[:page], :per_page => 50)
