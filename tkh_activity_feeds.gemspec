@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "railties", "> 4.0.0"
-  spec.add_dependency "tkh_toolbox", "> 0.13"
+  spec.add_dependency "tkh_toolbox", "> 1.0.beta1"
 
   spec.add_development_dependency "bundler"
   spec.add_development_dependency "rake"

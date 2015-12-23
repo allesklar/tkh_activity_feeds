@@ -7,7 +7,7 @@ This Rails engine gem creates and displays activity feeds.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'tkh_activity_feeds', '~> 0.13'
+gem 'tkh_activity_feeds', '~> 1.0.beta1'
 ```
 
 Execute:
