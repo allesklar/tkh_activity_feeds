@@ -1,8 +1,8 @@
 class ActivitiesController < ApplicationController
 
   before_action :authenticate
-  before_action -> { require_permission 'read_activities'}, only: [ :index ]
-  before_action -> { require_permission 'write_activities'}, only: [ :destroy ]
+  before_action -> { require_permission_to 'read_activities'},  only: [ :index ]
+  before_action -> { require_permission_to 'write_activities'}, only: [ :destroy ]
 
   def index
     @activities = Activity.by_recent.paginate(:page => params[:page], :per_page => 50)
