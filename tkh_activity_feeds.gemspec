@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.name          = "tkh_activity_feeds"
   spec.version       = TkhActivityFeeds::VERSION
   spec.authors       = ["Swami Atma"]
-  spec.email         = ["swami@TenThousandHours.eu"]
+  spec.email         = ["swamiatma@yoga108.org"]
   spec.summary       = %q{Activity feeds in your Rails app.}
   spec.description   = %q{Ralis Engine which creates and displays activity feeds.}
   spec.homepage      = "https://github.com/allesklar/tkh_activity_feeds"
@@ -18,8 +18,8 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "railties", "> 4.0.0"
-  spec.add_dependency "tkh_toolbox", "~> 1.0.beta1"
+  spec.add_dependency "railties"
+  spec.add_dependency "tkh_toolbox"
 
   spec.add_development_dependency "bundler"
   spec.add_development_dependency "rake"
